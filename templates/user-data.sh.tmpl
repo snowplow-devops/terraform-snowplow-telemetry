@@ -1,0 +1,75 @@
+# -----------------------------------------------------------------------------
+#  SNOWPLOW TELEMETRY INSTALLATION
+# -----------------------------------------------------------------------------
+
+# Install script
+sudo cat > /usr/local/bin/snowplow-track-vm-telemetry << \EOF
+${snowplow_track_vm_telemetry}
+EOF
+sudo chmod +x /usr/local/bin/snowplow-track-vm-telemetry
+
+# Manually track 'vm_start' event in user-data
+/usr/local/bin/snowplow-track-vm-telemetry "iglu:com.snowplowanalytics.oss/vm_start/jsonschema/1-0-0"
+
+# Add service to capture VM startup
+sudo cat > /etc/systemd/system/snowplow-telemetry-start.service << \EOF
+[Unit]
+Description=Snowplow Telemetry for VM Start
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/local/bin/snowplow-track-vm-telemetry "iglu:com.snowplowanalytics.oss/vm_start/jsonschema/1-0-0"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Add service to capture VM shutdown
+sudo cat > /etc/systemd/system/snowplow-telemetry-stop.service << \EOF
+[Unit]
+Description=Snowplow Telemetry for VM Stop
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/snowplow-track-vm-telemetry "iglu:com.snowplowanalytics.oss/vm_stop/jsonschema/1-0-0"
+
+[Install]
+WantedBy=halt.target reboot.target shutdown.target
+EOF
+
+# Add service + timer to capture VM heartbeat
+sudo cat > /etc/systemd/system/snowplow-telemetry-heartbeat.service << \EOF
+[Unit]
+Description=Snowplow Telemetry for VM Heartbeat
+Wants=snowplow-telemetry-heartbeat.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/snowplow-track-vm-telemetry "iglu:com.snowplowanalytics.oss/vm_heartbeat/jsonschema/1-0-0"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo cat > /etc/systemd/system/snowplow-telemetry-heartbeat.timer << \EOF
+[Unit]
+Description=Snowplow Telemetry for VM Heartbeat scheduler
+Requires=snowplow-telemetry-heartbeat.service
+
+[Timer]
+OnUnitActiveSec=60min
+
+[Install]
+WantedBy=timers.target
+EOF
+
+# Enable systemd telemetry services
+sudo systemctl enable snowplow-telemetry-start.service
+sudo systemctl enable snowplow-telemetry-stop.service
+sudo systemctl start snowplow-telemetry-heartbeat.timer
+sudo systemctl enable snowplow-telemetry-heartbeat.timer
