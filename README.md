@@ -73,6 +73,7 @@ No modules.
 | <a name="output_amazon_linux_2_user_data"></a> [amazon\_linux\_2\_user\_data](#output\_amazon\_linux\_2\_user\_data) | User-data shell chunk for adding telemetry to an Amazon Linux 2 server |
 | <a name="output_auto_generated_id"></a> [auto\_generated\_id](#output\_auto\_generated\_id) | The Snowplow OSS auto-generated ID for stitching together entities of the module being tracked |
 | <a name="output_collector_uri"></a> [collector\_uri](#output\_collector\_uri) | The Snowplow OSS Collector URI to use in collection of telemetry details |
+| <a name="output_gcp_ubuntu_20_04_user_data"></a> [gcp\_ubuntu\_20\_04\_user\_data](#output\_gcp\_ubuntu\_20\_04\_user\_data) | User-data shell chunk for adding telemetry to an Ubuntu 20.04 server |
 | <a name="output_id"></a> [id](#output\_id) | The id of the tracking resource |
 
 # Copyright and license
