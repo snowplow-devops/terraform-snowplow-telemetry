@@ -74,4 +74,24 @@ locals {
   amazon_linux_2_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
     snowplow_track_vm_telemetry = local.amazon_linux_2
   })
+
+  gcp_ubuntu_20_04 = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", {
+    oss_context_schema = local.oss_context_schema
+
+    user_provided_id_raw = var.user_provided_id
+    auto_generated_id    = local.auto_generated_id
+    cloud                = local.cloud
+    region               = var.region
+    module_name          = var.module_name
+    module_version       = var.module_version
+    app_name             = var.app_name
+    app_version          = var.app_version
+
+    collector_uri  = local.collector_uri
+    tracker_app_id = local.tracker_app_id
+  })
+
+  gcp_ubuntu_20_04_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = local.gcp_ubuntu_20_04
+  })
 }
