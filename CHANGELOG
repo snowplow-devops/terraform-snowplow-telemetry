@@ -1,3 +1,7 @@
+Version 0.2.0 (2021-08-19)
+--------------------------
+Add support for Telemetry on GCP based Ubuntu 20.04 image (#4)
+
 Version 0.1.1 (2021-08-12)
 --------------------------
 Update License badge to use HTTPS (#2)
