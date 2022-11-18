@@ -32,3 +32,21 @@ variable "app_version" {
   description = "The version of the application (e.g. 1.0.0)."
   type        = string
 }
+
+variable "app_name_override_1" {
+  description = "An application name override for modules that deploy N micro-services."
+  type        = string
+  default     = ""
+}
+
+variable "app_name_override_2" {
+  description = "An application name override for modules that deploy N micro-services."
+  type        = string
+  default     = ""
+}
+
+variable "app_name_override_3" {
+  description = "An application name override for modules that deploy N micro-services."
+  type        = string
+  default     = ""
+}
