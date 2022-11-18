@@ -32,7 +32,7 @@ _Note_: See the templates for the exact user-data that is executed.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.15 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | >= 3 |
 | <a name="requirement_snowplow"></a> [snowplow](#requirement\_snowplow) | >= 0.4 |
 
