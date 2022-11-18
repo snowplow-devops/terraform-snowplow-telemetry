@@ -65,16 +65,25 @@ No modules.
 | <a name="input_module_version"></a> [module\_version](#input\_module\_version) | The version of the terraform module (e.g. 1.0.0). | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | The region the services are running in. | `string` | n/a | yes |
 | <a name="input_user_provided_id"></a> [user\_provided\_id](#input\_user\_provided\_id) | Optional ID provided by user as an input to each terraform module. Intended to tie events together across modules, infrastructure and apps when used consistently. | `string` | n/a | yes |
+| <a name="input_app_name_override_1"></a> [app\_name\_override\_1](#input\_app\_name\_override\_1) | An application name override for modules that deploy N micro-services. | `string` | `""` | no |
+| <a name="input_app_name_override_2"></a> [app\_name\_override\_2](#input\_app\_name\_override\_2) | An application name override for modules that deploy N micro-services. | `string` | `""` | no |
+| <a name="input_app_name_override_3"></a> [app\_name\_override\_3](#input\_app\_name\_override\_3) | An application name override for modules that deploy N micro-services. | `string` | `""` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_amazon_linux_2_user_data"></a> [amazon\_linux\_2\_user\_data](#output\_amazon\_linux\_2\_user\_data) | User-data shell chunk for adding telemetry to an Amazon Linux 2 server |
+| <a name="output_amazon_linux_2_user_data_1"></a> [amazon\_linux\_2\_user\_data\_1](#output\_amazon\_linux\_2\_user\_data\_1) | User-data shell chunk for adding telemetry to an Amazon Linux 2 server |
+| <a name="output_amazon_linux_2_user_data_2"></a> [amazon\_linux\_2\_user\_data\_2](#output\_amazon\_linux\_2\_user\_data\_2) | User-data shell chunk for adding telemetry to an Amazon Linux 2 server |
+| <a name="output_amazon_linux_2_user_data_3"></a> [amazon\_linux\_2\_user\_data\_3](#output\_amazon\_linux\_2\_user\_data\_3) | User-data shell chunk for adding telemetry to an Amazon Linux 2 server |
 | <a name="output_auto_generated_id"></a> [auto\_generated\_id](#output\_auto\_generated\_id) | The Snowplow OSS auto-generated ID for stitching together entities of the module being tracked |
 | <a name="output_collector_uri"></a> [collector\_uri](#output\_collector\_uri) | The Snowplow OSS Collector URI to use in collection of telemetry details |
 | <a name="output_gcp_ubuntu_20_04_user_data"></a> [gcp\_ubuntu\_20\_04\_user\_data](#output\_gcp\_ubuntu\_20\_04\_user\_data) | User-data shell chunk for adding telemetry to an Ubuntu 20.04 server |
-| <a name="output_id"></a> [id](#output\_id) | The id of the tracking resource |
+| <a name="output_gcp_ubuntu_20_04_user_data_1"></a> [gcp\_ubuntu\_20\_04\_user\_data\_1](#output\_gcp\_ubuntu\_20\_04\_user\_data\_1) | User-data shell chunk for adding telemetry to an Ubuntu 20.04 server |
+| <a name="output_gcp_ubuntu_20_04_user_data_2"></a> [gcp\_ubuntu\_20\_04\_user\_data\_2](#output\_gcp\_ubuntu\_20\_04\_user\_data\_2) | User-data shell chunk for adding telemetry to an Ubuntu 20.04 server |
+| <a name="output_gcp_ubuntu_20_04_user_data_3"></a> [gcp\_ubuntu\_20\_04\_user\_data\_3](#output\_gcp\_ubuntu\_20\_04\_user\_data\_3) | User-data shell chunk for adding telemetry to an Ubuntu 20.04 server |
+| <a name="output_id"></a> [id](#output\_id) | The id of the tracking resource
 
 # Copyright and license
 

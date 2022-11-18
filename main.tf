@@ -55,7 +55,7 @@ resource "snowplow_track_self_describing_event" "telemetry" {
 }
 
 locals {
-  amazon_linux_2 = templatefile("${path.module}/templates/amazon_linux_2.sh.tmpl", {
+  common_vars = {
     oss_context_schema = local.oss_context_schema
 
     user_provided_id_raw = var.user_provided_id
@@ -64,34 +64,41 @@ locals {
     region               = var.region
     module_name          = var.module_name
     module_version       = var.module_version
-    app_name             = var.app_name
     app_version          = var.app_version
 
     collector_uri  = local.collector_uri
     tracker_app_id = local.tracker_app_id
-  })
+  }
 
   amazon_linux_2_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = local.amazon_linux_2
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2.sh.tmpl", merge(local.common_vars, { app_name = var.app_name }))
   })
 
-  gcp_ubuntu_20_04 = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", {
-    oss_context_schema = local.oss_context_schema
+  amazon_linux_2_user_data_1 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_1 }))
+  })
 
-    user_provided_id_raw = var.user_provided_id
-    auto_generated_id    = local.auto_generated_id
-    cloud                = local.cloud
-    region               = var.region
-    module_name          = var.module_name
-    module_version       = var.module_version
-    app_name             = var.app_name
-    app_version          = var.app_version
+  amazon_linux_2_user_data_2 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_2 }))
+  })
 
-    collector_uri  = local.collector_uri
-    tracker_app_id = local.tracker_app_id
+  amazon_linux_2_user_data_3 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_3 }))
   })
 
   gcp_ubuntu_20_04_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = local.gcp_ubuntu_20_04
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name }))
+  })
+
+  gcp_ubuntu_20_04_user_data_1 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_1 }))
+  })
+
+  gcp_ubuntu_20_04_user_data_2 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_2 }))
+  })
+
+  gcp_ubuntu_20_04_user_data_3 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_3 }))
   })
 }
