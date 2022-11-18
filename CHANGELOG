@@ -1,3 +1,10 @@
+Version 0.3.0 (2022-11-18)
+--------------------------
+Bump Terraform Version to 1.0.0 (#6)
+Cleanup CI workflow (#7)
+Update LICENSE to 2021-2022 (#8)
+Add ability to override up to 3 application names (#9)
+
 Version 0.2.0 (2021-08-19)
 --------------------------
 Add support for Telemetry on GCP based Ubuntu 20.04 image (#4)
