@@ -24,7 +24,10 @@ function install_snowplow_tracking_cli() {
 function lookup_path_in_instance_metadata() {
   [ "$#" -eq 1 ] || die "func:lookup_path_in_instance_metadata > 1 argument required, $# provided"
   local __path="$1"
-  curl --silent --location "$EC2_INSTANCE_METADATA_URL/$__path/"
+
+  local __ec2_metadata_token
+  __ec2_metadata_token=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+  curl -H "X-aws-ec2-metadata-token: $${__ec2_metadata_token}" --silent --location "$EC2_INSTANCE_METADATA_URL/$__path/"
 }
 
 function get_instance_id() {
