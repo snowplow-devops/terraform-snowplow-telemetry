@@ -73,10 +73,10 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_amazon_linux_2_user_data"></a> [amazon\_linux\_2\_user\_data](#output\_amazon\_linux\_2\_user\_data) | User-data shell chunk for adding telemetry to an Amazon Linux 2 server |
-| <a name="output_amazon_linux_2_user_data_1"></a> [amazon\_linux\_2\_user\_data\_1](#output\_amazon\_linux\_2\_user\_data\_1) | User-data shell chunk for adding telemetry to an Amazon Linux 2 server |
-| <a name="output_amazon_linux_2_user_data_2"></a> [amazon\_linux\_2\_user\_data\_2](#output\_amazon\_linux\_2\_user\_data\_2) | User-data shell chunk for adding telemetry to an Amazon Linux 2 server |
-| <a name="output_amazon_linux_2_user_data_3"></a> [amazon\_linux\_2\_user\_data\_3](#output\_amazon\_linux\_2\_user\_data\_3) | User-data shell chunk for adding telemetry to an Amazon Linux 2 server |
+| <a name="output_amazon_linux_2023_user_data"></a> [amazon\_linux\_2023\_user\_data](#output\_amazon\_linux\_2023\_user\_data) | User-data shell chunk for adding telemetry to an Amazon Linux 2023 server |
+| <a name="output_amazon_linux_2023_user_data_1"></a> [amazon\_linux\_2023\_user\_data\_1](#output\_amazon\_linux\_2023\_user\_data\_1) | User-data shell chunk for adding telemetry to an Amazon Linux 2023 server |
+| <a name="output_amazon_linux_2023_user_data_2"></a> [amazon\_linux\_2023\_user\_data\_2](#output\_amazon\_linux\_2023\_user\_data\_2) | User-data shell chunk for adding telemetry to an Amazon Linux 2023 server |
+| <a name="output_amazon_linux_2023_user_data_3"></a> [amazon\_linux\_2023\_user\_data\_3](#output\_amazon\_linux\_2023\_user\_data\_3) | User-data shell chunk for adding telemetry to an Amazon Linux 2023 server |
 | <a name="output_auto_generated_id"></a> [auto\_generated\_id](#output\_auto\_generated\_id) | The Snowplow OSS auto-generated ID for stitching together entities of the module being tracked |
 | <a name="output_azurerm_ubuntu_22_04_user_data"></a> [azurerm\_ubuntu\_22\_04\_user\_data](#output\_azurerm\_ubuntu\_22\_04\_user\_data) | User-data shell chunk for adding telemetry to an Ubuntu 22.04 server |
 | <a name="output_azurerm_ubuntu_22_04_user_data_1"></a> [azurerm\_ubuntu\_22\_04\_user\_data\_1](#output\_azurerm\_ubuntu\_22\_04\_user\_data\_1) | User-data shell chunk for adding telemetry to an Ubuntu 22.04 server |

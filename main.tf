@@ -70,20 +70,20 @@ locals {
     tracker_app_id = local.tracker_app_id
   }
 
-  amazon_linux_2_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2.sh.tmpl", merge(local.common_vars, { app_name = var.app_name }))
+  amazon_linux_2023_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2023.sh.tmpl", merge(local.common_vars, { app_name = var.app_name }))
   })
 
-  amazon_linux_2_user_data_1 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_1 }))
+  amazon_linux_2023_user_data_1 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2023.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_1 }))
   })
 
-  amazon_linux_2_user_data_2 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_2 }))
+  amazon_linux_2023_user_data_2 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2023.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_2 }))
   })
 
-  amazon_linux_2_user_data_3 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_3 }))
+  amazon_linux_2023_user_data_3 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2023.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_3 }))
   })
 
   gcp_ubuntu_20_04_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
