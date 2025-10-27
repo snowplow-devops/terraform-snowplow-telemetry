@@ -1,3 +1,7 @@
+Version 0.6.0 (2025-10-27)
+--------------------------
+Update to support Amazon Linux 2023
+
 Version 0.5.0 (2023-06-08)
 --------------------------
 Add support for Telemetry on Azure based Ubuntu 22.04 image (#14)
