@@ -86,20 +86,20 @@ locals {
     snowplow_track_vm_telemetry = templatefile("${path.module}/templates/amazon_linux_2023.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_3 }))
   })
 
-  gcp_ubuntu_20_04_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name }))
+  gcp_ubuntu_24_04_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_24_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name }))
   })
 
-  gcp_ubuntu_20_04_user_data_1 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_1 }))
+  gcp_ubuntu_24_04_user_data_1 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_24_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_1 }))
   })
 
-  gcp_ubuntu_20_04_user_data_2 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_2 }))
+  gcp_ubuntu_24_04_user_data_2 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_24_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_2 }))
   })
 
-  gcp_ubuntu_20_04_user_data_3 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
-    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_20_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_3 }))
+  gcp_ubuntu_24_04_user_data_3 = templatefile("${path.module}/templates/user-data.sh.tmpl", {
+    snowplow_track_vm_telemetry = templatefile("${path.module}/templates/gcp_ubuntu_24_04.sh.tmpl", merge(local.common_vars, { app_name = var.app_name_override_3 }))
   })
 
   azurerm_ubuntu_22_04_user_data = templatefile("${path.module}/templates/user-data.sh.tmpl", {

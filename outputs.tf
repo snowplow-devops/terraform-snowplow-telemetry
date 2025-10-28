@@ -33,24 +33,24 @@ output "amazon_linux_2023_user_data_3" {
   value       = local.amazon_linux_2023_user_data_3
 }
 
-output "gcp_ubuntu_20_04_user_data" {
-  description = "User-data shell chunk for adding telemetry to an Ubuntu 20.04 server"
-  value       = local.gcp_ubuntu_20_04_user_data
+output "gcp_ubuntu_24_04_user_data" {
+  description = "User-data shell chunk for adding telemetry to an Ubuntu 24.04 server"
+  value       = local.gcp_ubuntu_24_04_user_data
 }
 
-output "gcp_ubuntu_20_04_user_data_1" {
-  description = "User-data shell chunk for adding telemetry to an Ubuntu 20.04 server"
-  value       = local.gcp_ubuntu_20_04_user_data_1
+output "gcp_ubuntu_24_04_user_data_1" {
+  description = "User-data shell chunk for adding telemetry to an Ubuntu 24.04 server"
+  value       = local.gcp_ubuntu_24_04_user_data_1
 }
 
-output "gcp_ubuntu_20_04_user_data_2" {
-  description = "User-data shell chunk for adding telemetry to an Ubuntu 20.04 server"
-  value       = local.gcp_ubuntu_20_04_user_data_2
+output "gcp_ubuntu_24_04_user_data_2" {
+  description = "User-data shell chunk for adding telemetry to an Ubuntu 24.04 server"
+  value       = local.gcp_ubuntu_24_04_user_data_2
 }
 
-output "gcp_ubuntu_20_04_user_data_3" {
-  description = "User-data shell chunk for adding telemetry to an Ubuntu 20.04 server"
-  value       = local.gcp_ubuntu_20_04_user_data_3
+output "gcp_ubuntu_24_04_user_data_3" {
+  description = "User-data shell chunk for adding telemetry to an Ubuntu 24.04 server"
+  value       = local.gcp_ubuntu_24_04_user_data_3
 }
 
 output "azurerm_ubuntu_22_04_user_data" {

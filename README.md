@@ -83,10 +83,10 @@ No modules.
 | <a name="output_azurerm_ubuntu_22_04_user_data_2"></a> [azurerm\_ubuntu\_22\_04\_user\_data\_2](#output\_azurerm\_ubuntu\_22\_04\_user\_data\_2) | User-data shell chunk for adding telemetry to an Ubuntu 22.04 server |
 | <a name="output_azurerm_ubuntu_22_04_user_data_3"></a> [azurerm\_ubuntu\_22\_04\_user\_data\_3](#output\_azurerm\_ubuntu\_22\_04\_user\_data\_3) | User-data shell chunk for adding telemetry to an Ubuntu 22.04 server |
 | <a name="output_collector_uri"></a> [collector\_uri](#output\_collector\_uri) | The Snowplow OSS Collector URI to use in collection of telemetry details |
-| <a name="output_gcp_ubuntu_20_04_user_data"></a> [gcp\_ubuntu\_20\_04\_user\_data](#output\_gcp\_ubuntu\_20\_04\_user\_data) | User-data shell chunk for adding telemetry to an Ubuntu 20.04 server |
-| <a name="output_gcp_ubuntu_20_04_user_data_1"></a> [gcp\_ubuntu\_20\_04\_user\_data\_1](#output\_gcp\_ubuntu\_20\_04\_user\_data\_1) | User-data shell chunk for adding telemetry to an Ubuntu 20.04 server |
-| <a name="output_gcp_ubuntu_20_04_user_data_2"></a> [gcp\_ubuntu\_20\_04\_user\_data\_2](#output\_gcp\_ubuntu\_20\_04\_user\_data\_2) | User-data shell chunk for adding telemetry to an Ubuntu 20.04 server |
-| <a name="output_gcp_ubuntu_20_04_user_data_3"></a> [gcp\_ubuntu\_20\_04\_user\_data\_3](#output\_gcp\_ubuntu\_20\_04\_user\_data\_3) | User-data shell chunk for adding telemetry to an Ubuntu 20.04 server |
+| <a name="output_gcp_ubuntu_24_04_user_data"></a> [gcp\_ubuntu\_24\_04\_user\_data](#output\_gcp\_ubuntu\_24\_04\_user\_data) | User-data shell chunk for adding telemetry to an Ubuntu 24.04 server |
+| <a name="output_gcp_ubuntu_24_04_user_data_1"></a> [gcp\_ubuntu\_24\_04\_user\_data\_1](#output\_gcp\_ubuntu\_24\_04\_user\_data\_1) | User-data shell chunk for adding telemetry to an Ubuntu 24.04 server |
+| <a name="output_gcp_ubuntu_24_04_user_data_2"></a> [gcp\_ubuntu\_24\_04\_user\_data\_2](#output\_gcp\_ubuntu\_24\_04\_user\_data\_2) | User-data shell chunk for adding telemetry to an Ubuntu 24.04 server |
+| <a name="output_gcp_ubuntu_24_04_user_data_3"></a> [gcp\_ubuntu\_24\_04\_user\_data\_3](#output\_gcp\_ubuntu\_24\_04\_user\_data\_3) | User-data shell chunk for adding telemetry to an Ubuntu 24.04 server |
 | <a name="output_id"></a> [id](#output\_id) | The id of the tracking resource |
 
 # Copyright and license
