@@ -1,3 +1,7 @@
+Version 0.6.1 (2025-10-28)
+--------------------------
+Update to support GCP Ubuntu 24.04
+
 Version 0.6.0 (2025-10-27)
 --------------------------
 Update to support Amazon Linux 2023
