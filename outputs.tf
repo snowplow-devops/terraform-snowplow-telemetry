@@ -53,22 +53,22 @@ output "gcp_ubuntu_24_04_user_data_3" {
   value       = local.gcp_ubuntu_24_04_user_data_3
 }
 
-output "azurerm_ubuntu_22_04_user_data" {
-  description = "User-data shell chunk for adding telemetry to an Ubuntu 22.04 server"
-  value       = local.azurerm_ubuntu_22_04_user_data
+output "azurerm_ubuntu_24_04_user_data" {
+  description = "User-data shell chunk for adding telemetry to an Ubuntu 24.04 server"
+  value       = local.azurerm_ubuntu_24_04_user_data
 }
 
-output "azurerm_ubuntu_22_04_user_data_1" {
-  description = "User-data shell chunk for adding telemetry to an Ubuntu 22.04 server"
-  value       = local.azurerm_ubuntu_22_04_user_data_1
+output "azurerm_ubuntu_24_04_user_data_1" {
+  description = "User-data shell chunk for adding telemetry to an Ubuntu 24.04 server"
+  value       = local.azurerm_ubuntu_24_04_user_data_1
 }
 
-output "azurerm_ubuntu_22_04_user_data_2" {
-  description = "User-data shell chunk for adding telemetry to an Ubuntu 22.04 server"
-  value       = local.azurerm_ubuntu_22_04_user_data_2
+output "azurerm_ubuntu_24_04_user_data_2" {
+  description = "User-data shell chunk for adding telemetry to an Ubuntu 24.04 server"
+  value       = local.azurerm_ubuntu_24_04_user_data_2
 }
 
-output "azurerm_ubuntu_22_04_user_data_3" {
-  description = "User-data shell chunk for adding telemetry to an Ubuntu 22.04 server"
-  value       = local.azurerm_ubuntu_22_04_user_data_3
+output "azurerm_ubuntu_24_04_user_data_3" {
+  description = "User-data shell chunk for adding telemetry to an Ubuntu 24.04 server"
+  value       = local.azurerm_ubuntu_24_04_user_data_3
 }
