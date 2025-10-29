@@ -1,3 +1,7 @@
+Version 0.6.2 (2025-10-29)
+--------------------------
+Update to support Azure Ubuntu 24.04
+
 Version 0.6.1 (2025-10-28)
 --------------------------
 Update to support GCP Ubuntu 24.04
