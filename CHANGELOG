@@ -1,3 +1,7 @@
+Version 0.6.3 (2026-09-26)
+--------------------------
+Update GitHub Actions to Node 24 and pin to commit hashes
+
 Version 0.6.2 (2025-10-29)
 --------------------------
 Update to support Azure Ubuntu 24.04
